@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb+srv://max123:max123@pokedex-oompt.mongodb.net/test?retryWrites=true&w=majority",
+    "JWTsecret": "secret"
+}
