@@ -4,11 +4,7 @@
   "description": "Custom Pokedex App",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "server": "node server.js",
-    "client": "npm start --prefix client",
-    "clientinstall": "npm install --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "start": "node server.js"
   },
   "keywords": [
     "pokedex"
