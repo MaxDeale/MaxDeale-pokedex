@@ -22,21 +22,16 @@ app.get("/", (req, res) =>
   })
 );
 
-app.use(express.static(path.join(__dirname, 'client/build')));
-
 // defining routes
 app.use("/api/users", require("./routes/users"));
 app.use("/api/pokemon", require("./routes/pokemon"));
 app.use("/api/auth", require("./routes/auth"));
 
-//serve static assets in production
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname + '/client/build/index.html'));
-});
+let port = process.env.PORT;
 
-const PORT = process.env.port || 5000;
-
-//ddd
-app.listen(`${PORT}`, () => {
-  console.log(`Pokemon server started successfully in port ${PORT}`);
+if (port == null || port == "") {
+  port = 5000;
+}
+app.listen(port, () => {
+  console.log(`Pokemon server started successfully in port ${port}`);
 });
